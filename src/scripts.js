@@ -1,7 +1,18 @@
 var $this = document;
+var btnName = $this.getElementById('btn-name');
+
 $this.onkeydown = function(event) {
     var key = event.key;
     console.log(key);
-    var btnName = $this.getElementById('btn-name');
-    btnName.innerHTML = key.toString().toUpperCase();
+    var btnString = key.toString().toUpperCase();
+    btnName.innerHTML = btnString;
+    switch (btnString) {
+        case 'Q': 
+            var sound = document.getElementById("boom-audio");
+            sound.play();
+            break;
+        default:
+            break;
+    } 
+
 };
