@@ -1,24 +1,22 @@
-var $this = document;
-var btnName = $this.getElementById('btn-name');
+const $this = document;
+const btnName = $this.getElementById('btn-name');
 
 $this.onkeydown = function(event) {
-    var key = event.key;
+    const key = event.key;
     onBtnPressed(key);
 };
 
-function playSound(soundId) {
-    document.getElementById(soundId).play();
+const playSound = (soundId) => {
+    const audio = $this.getElementById(soundId);
+    audio.currentTime = 0; // reset the audio
+    audio.play();
 }
 
-function defineBtn(key) {
-    return key.toString().toUpperCase();
-}
+const defineBtn = (key) => key.toString().toUpperCase();
 
-function displayBtn(btn) {
-    btnName.innerHTML = btn;
-}
+const displayBtn = (btn) => btnName.innerHTML = btn;
 
-function onBtnPressed(btn) {
+const onBtnPressed = (btn) => {
     console.log(btn);
     var btnName = defineBtn(btn);
     displayBtn(btnName);
