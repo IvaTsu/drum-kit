@@ -19,9 +19,9 @@ const displayBtn = (btn) => btnName.innerHTML = btn;
 const onBtnPressed = (btn) => {
     console.log(btn);
     const btnName = defineBtn(btn);
-    displayBtn(btnName);
     switch (btnName) {
-        case 'Q': 
+        case 'Q':
+            displayBtn(btnName);
             playSound('boom-audio');
             break;
         default:
