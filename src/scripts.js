@@ -18,7 +18,7 @@ const displayBtn = (btn) => btnName.innerHTML = btn;
 
 const onBtnPressed = (btn) => {
     console.log(btn);
-    var btnName = defineBtn(btn);
+    const btnName = defineBtn(btn);
     displayBtn(btnName);
     switch (btnName) {
         case 'Q': 
