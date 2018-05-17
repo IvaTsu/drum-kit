@@ -3,16 +3,30 @@ var btnName = $this.getElementById('btn-name');
 
 $this.onkeydown = function(event) {
     var key = event.key;
-    console.log(key);
-    var btnString = key.toString().toUpperCase();
-    btnName.innerHTML = btnString;
-    switch (btnString) {
+    onBtnPressed(key);
+};
+
+function playSound(soundId) {
+    document.getElementById(soundId).play();
+}
+
+function defineBtn(key) {
+    return key.toString().toUpperCase();
+}
+
+function displayBtn(btn) {
+    btnName.innerHTML = btn;
+}
+
+function onBtnPressed(btn) {
+    console.log(btn);
+    var btnName = defineBtn(btn);
+    displayBtn(btnName);
+    switch (btnName) {
         case 'Q': 
-            var sound = document.getElementById("boom-audio");
-            sound.play();
+            playSound('boom-audio');
             break;
         default:
             break;
-    } 
-
-};
+    }
+}
