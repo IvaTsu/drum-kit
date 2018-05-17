@@ -5,3 +5,7 @@ body {
     background-position: 100% top;
     background-attachment: fixed;
 }
+
+.o-btn-name {
+    color: rebeccapurple;
+}
