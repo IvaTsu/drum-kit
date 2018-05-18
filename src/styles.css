@@ -6,6 +6,7 @@ body {
     background-attachment: fixed;
 }
 
-.o-btn-name {
+.o-btn-name,
+.o-btn-code {
     color: rebeccapurple;
 }

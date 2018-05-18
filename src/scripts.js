@@ -1,9 +1,11 @@
 const $this = document;
 const btnName = $this.getElementById('btn-name');
+const btnCode = $this.getElementById('btn-code');
 
 $this.onkeydown = function(event) {
+    const keyCode = event.keyCode;
     const key = event.key;
-    onBtnPressed(key);
+    onBtnPressed(keyCode, key);
 };
 
 const playSound = (soundId) => {
@@ -14,18 +16,20 @@ const playSound = (soundId) => {
 
 const defineBtn = (key) => key.toString().toUpperCase();
 
-const displayBtn = (btn) => btnName.innerHTML = btn;
+const displayBtn = (keyCode, key) => {
+    btnName.innerHTML = key;
+    btnCode.innerHTML = keyCode;
+};
 
-const onBtnPressed = (btn) => {
-    console.log(btn);
-    const btnName = defineBtn(btn);
-    switch (btnName) {
-        case 'Q':
-            displayBtn(btnName);
+const onBtnPressed = (keyCode, key) => {
+    const btnName = defineBtn(key);
+    switch (keyCode) {
+        case 81:
+            displayBtn(keyCode, btnName);
             playSound('boom-audio');
             break;
-        case 'W':
-            displayBtn(btnName);
+        case 87:
+            displayBtn(keyCode, btnName);
             playSound('clap-audio');
         default:
             break;
