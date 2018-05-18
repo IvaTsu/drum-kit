@@ -24,6 +24,9 @@ const onBtnPressed = (btn) => {
             displayBtn(btnName);
             playSound('boom-audio');
             break;
+        case 'W':
+            displayBtn(btnName);
+            playSound('clap-audio');
         default:
             break;
     }
