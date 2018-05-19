@@ -4,6 +4,7 @@ const btnCode = $this.getElementById('btn-code');
 
 $this.onkeydown = function(event) {
     const keyCode = event.keyCode;
+    console.log(keyCode);
     const key = event.key;
     onBtnPressed(keyCode, key);
 };
@@ -31,6 +32,9 @@ const onBtnPressed = (keyCode, key) => {
         case 87:
             displayBtn(keyCode, btnName);
             playSound('clap-audio');
+        case 69:
+            displayBtn(keyCode, btnName);
+            playSound('hihat-audio');
         default:
             break;
     }
