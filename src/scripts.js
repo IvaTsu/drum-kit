@@ -32,27 +32,35 @@ const onBtnPressed = (keyCode, key) => {
         case 87: // 'W' button
             displayBtn(keyCode, btnName);
             playSound('clap-audio');
+            break;
         case 69: // 'E' button
             displayBtn(keyCode, btnName);
             playSound('hihat-audio');
+            break;
         case 82: // 'R' button
             displayBtn(keyCode, btnName);
             playSound('kick-audio');
+            break;
         case 84: // 'T' button
             displayBtn(keyCode, btnName);
             playSound('openhat-audio');
+            break;
         case 89: // 'Y' button
             displayBtn(keyCode, btnName);
             playSound('ride-audio');
+            break;
         case 85: // 'U' button
             displayBtn(keyCode, btnName);
-            playSound('share-audio');
+            playSound('snare-audio');
+            break;
         case 73: // 'I' button
             displayBtn(keyCode, btnName);
             playSound('tink-audio');
+            break;
         case 79: // 'O' button
             displayBtn(keyCode, btnName);
             playSound('tom-audio');
+            break;
         default:
             break;
     }
