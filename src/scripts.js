@@ -25,11 +25,11 @@ const displayBtn = (keyCode, key) => {
 const onBtnPressed = (keyCode, key) => {
     const btnName = defineBtn(key);
     switch (keyCode) {
-        case 81: // 'Q' Button
+        case 81: // 'Q' button
             displayBtn(keyCode, btnName);
             playSound('boom-audio');
             break;
-        case 87: // 'W' Button
+        case 87: // 'W' button
             displayBtn(keyCode, btnName);
             playSound('clap-audio');
         case 69: // 'E' button
@@ -38,6 +38,9 @@ const onBtnPressed = (keyCode, key) => {
         case 65: // 'A' button
             displayBtn(keyCode, btnName);
             playSound('kick-audio');
+        case 83: // 'S' button
+            displayBtn(keyCode, btnName);
+            playSound('openhat-audio');
         default:
             break;
     }
