@@ -18,48 +18,49 @@ const playSound = (soundId) => {
 
 const defineBtn = (key) => key.toString().toUpperCase();
 
-const displayBtn = (keyCode, key) => {
+const displayBtn = (keyCode, key, audio) => {
     btnName.innerHTML = key;
     btnCode.innerHTML = keyCode;
+    audioName.innerHTML = audio;
 };
 
 const onBtnPressed = (keyCode, key) => {
     const btnName = defineBtn(key);
     switch (keyCode) {
         case 81: // 'Q' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'boom');
             playSound('boom-audio');
             break;
         case 87: // 'W' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'clap');
             playSound('clap-audio');
             break;
         case 69: // 'E' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'hihat');
             playSound('hihat-audio');
             break;
         case 82: // 'R' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'kick');
             playSound('kick-audio');
             break;
         case 84: // 'T' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'openhat');
             playSound('openhat-audio');
             break;
         case 89: // 'Y' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'ride');
             playSound('ride-audio');
             break;
         case 85: // 'U' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'snare');
             playSound('snare-audio');
             break;
         case 73: // 'I' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'tink');
             playSound('tink-audio');
             break;
         case 79: // 'O' button
-            displayBtn(keyCode, btnName);
+            displayBtn(keyCode, btnName, 'tom');
             playSound('tom-audio');
             break;
         default:
