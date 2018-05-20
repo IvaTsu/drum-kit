@@ -1,6 +1,7 @@
 const $this = document;
 const btnName = $this.getElementById('btn-name');
 const btnCode = $this.getElementById('btn-code');
+const audioName = $this.getElementById('audio-name');
 
 $this.onkeydown = function(event) {
     const keyCode = event.keyCode;
