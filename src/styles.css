@@ -27,14 +27,16 @@ body {
 .c-btn-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    width: 10rem;
-    height: 10rem;
-    border: 2px solid slateblue;
+    width: 30rem;
+    height: 30rem;
+    border: 0.5rem solid slateblue;
 }
 
 .o-btn-name,
-.o-btn-code {
-    color: rebeccapurple;
+.o-btn-code,
+.o-music-name {
+    color: goldenrod;
+    font-size: 4.4rem;
 }
