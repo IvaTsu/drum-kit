@@ -2,6 +2,7 @@ const $this = document;
 const btnName = $this.getElementById('btn-name');
 const btnCode = $this.getElementById('btn-code');
 const audioName = $this.getElementById('audio-name');
+const btnContainer = $this.getElementById('btn-container');
 
 $this.onkeydown = function(event) {
     const keyCode = event.keyCode;
@@ -26,6 +27,10 @@ const displayBtn = (keyCode, key, audio) => {
 
 const onBtnPressed = (keyCode, key) => {
     const btnName = defineBtn(key);
+    btnContainer.classList.add('btnContainerActive');
+    setTimeout(function(){
+        btnContainer.classList.remove('btnContainerActive');
+    }, 1500);
     switch (keyCode) {
         case 81: // 'Q' button
             displayBtn(keyCode, btnName, 'boom');

@@ -25,6 +25,10 @@ body {
 }
 
 .c-btn-container {
+    display: none;
+}
+
+.btnContainerActive {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
