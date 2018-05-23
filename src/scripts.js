@@ -69,6 +69,7 @@ const onBtnPressed = (keyCode, key) => {
             playSound('tom-audio');
             break;
         default:
+            displayBtn(keyCode, btnName, '');
             break;
     }
 }
